@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+button{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 1em;
+}
+.header{
+    padding: 1em;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+}
+#content{
+    height: 100vh;
+    width: 100%;
+    background-image: url("/src/foodcover.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text{
+    font-size: 2rem;
+    color: white;
+    padding-bottom: 10px;
+}
+input{
+    height: 40px;
+    width: 500px;
+    border: none;
+    border-radius: 25px;
+    text-indent: 10px;
+
+}
+.aboutHeader{
+    font-size: 2.8rem;
+    text-align: center;
+}
+.aboouText{
+    font-size: 1.3rem;
+    text-align: center;
+}
+.line{
+    width: 100px;
+    height: 5px;
+    background-color: orange;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 2em;
+}
+.brake-header{
+    font-size: clamp(24px, 5vw, 48px);
+    text-align: center;
+    padding: 1em;
+}
+.brake-text{
+    font-size: 1.5em;
+    text-align: center;
+}
+.juice::after{
+    content: '';
+    display: inline-block;
+    width: clamp(15rem,25vw,5rem); 
+    text-align: center;
+    border-bottom: 3px dotted black;
+}
+.juice-details{
+    text-align: center;
+}
+.juice-details:last-child{
+    font-weight: bold;
+}
