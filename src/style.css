@@ -1,78 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
-button{
-    background-color: red;
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.top{
+    display: flex;
+    justify-content: center;
+}
+.overlay{
+    position: relative;
+    /* width: ; */
+}
+p.name {
+    position: absolute;
+    bottom: 30px;
+    font-size: 2.3em;
     color: white;
-    border: none;
-    padding: 1em;
+    padding-left: 10px;
 }
-.header{
-    padding: 1em;
+.bigtext{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
 }
-nav{
+.intro {
+    background-color: pink;
+    padding: 10px;
+    max-width: 500px;
+    align-items: center;
+    margin: 30px 0px;
     display: flex;
-    justify-content: space-around;
-}
-#content{
-    height: 100vh;
-    width: 100%;
-    background-image: url("/src/foodcover.jpg");
-    background-size: cover;
-    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.text{
-    font-size: 2rem;
-    color: white;
-    padding-bottom: 10px;
-}
-input{
-    height: 40px;
-    width: 500px;
-    border: none;
-    border-radius: 25px;
-    text-indent: 10px;
 
+.intro .about{
+    align-self: flex-start;
 }
-.aboutHeader{
-    font-size: 2.8rem;
+
+.intro > *{
+    margin-bottom: 20px;
+}
+img.socials {
+    width: 20px;
+}
+.headersocials{
+    align-self: flex-end;
+}
+main{
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+}
+.wrap{
+    /* display: flex; */
+    gap: 16px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+.projectContent{
+    background-color: var(--white);
+    width: 250px;
+    height: 280px;
+    border-radius: 5px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+.screenshot{
+    height: 150px;
+    background-color: aqua;
     text-align: center;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    color: white;
 }
-.aboouText{
-    font-size: 1.3rem;
-    text-align: center;
+.flex{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
 }
-.line{
-    width: 100px;
-    height: 5px;
+.description{
+    padding: 10px;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color:green;
+}
+.orange{
     background-color: orange;
-    text-align: center;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 2em;
 }
-.brake-header{
-    font-size: clamp(24px, 5vw, 48px);
-    text-align: center;
-    padding: 1em;
+.purple{
+    background-color: purple;
 }
-.brake-text{
-    font-size: 1.5em;
-    text-align: center;
+.lightBlue{
+    background-color: lightblue;
 }
-.juice::after{
-    content: '';
-    display: inline-block;
-    width: clamp(15rem,25vw,5rem); 
-    text-align: center;
-    border-bottom: 3px dotted black;
+.blue{
+    background-color: blue;
 }
-.juice-details{
-    text-align: center;
+.contacts > *{
+    padding: 10px;
 }
-.juice-details:last-child{
-    font-weight: bold;
+.contacts p{
+    width: 250px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: #0891B2;
+    color: white;
+    gap: 20px;
+    padding: 30px;
+}
+@media (max-width: 1000px) {
+    body{
+        font-size: 2rem;
+    }
+    .wrap{
+        grid-template-columns: 1fr 1fr;
+    }
+    header {
+        justify-content: center;
+        display: flex;
+        margin: auto;
+        padding: 20px;
+    }
+    .contacts{
+        width: 60%;
+    }
+    picture{
+        float: left;
+    }
+    footer picture{
+        width: 40%;
+    }
+    .footerImage{
+        max-width: 300px;
+    }
+    .intro{
+        display: block;
+        max-width: 650px;
+    }
+    .top{
+        display: block;
+        width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    body{
+        font-size: 1.2rem;
+    }
+    .wrap{
+        grid-template-columns: 1fr;
+    }
+    .top,
+    footer{
+        display: block;
+        width: 100%;
+    }
+    .intro{
+        background-color: white;
+    }
+    .intro .about {
+        align-self: flex-start;
+        text-align: center;
+        width: 100%;
+    }
+    .headersocials {
+        align-self: center;
+    }
+    header {
+        justify-content: center;
+        display: flex;
+    }
+
+p.name.bigtext {
+    font-size: 2.8em;
+}
+.top {
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 }
